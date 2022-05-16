@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React from 'react'
 import {v4 as uuidv4} from "uuid";
 
 const ToDoForm = ({input, setInput, todos, setTodos}) => {    
@@ -10,8 +10,7 @@ const ToDoForm = ({input, setInput, todos, setTodos}) => {
     const handleSubmit = (e) =>{        
         e.preventDefault();
         // console.log("LN12", input)
-        // console.log("LN13", uuidv4())
-        
+        // console.log("LN13", uuidv4())        
         setTodos([...todos, {id: uuidv4(), title: input, completed: false}])
          console.log("LN19", todos)
         localStorage.setItem('ToDos', JSON.stringify(todos))
