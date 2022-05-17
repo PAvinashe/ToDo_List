@@ -7,21 +7,7 @@ import ToDoList from './Components/ToDoList'
 const App = () => {
   const [input, setInput] = useState('');
   const [todos, setTodos] = useState([]);
-
-  const handleChange = (e) => {
-    setInput(e.target.value);
-};
-
-const handleSubmit = (e) =>{        
-    e.preventDefault();
-    console.log("LN12", input)
-    console.log("LN13", uuidv4())
-
-    setTodos([...todos, {id: uuidv4(), title: input, }])
-     console.log("LN19", todos)
-    localStorage.setItem('ToDos', JSON.stringify(todos))
-    setInput('');
-};
+  const [editTodo, setEditTodo] = useState(null)
 
   return (
     <div className="container">
@@ -35,12 +21,15 @@ const handleSubmit = (e) =>{
             setInput={setInput}
             todos={todos}
             setTodos={setTodos}
+            editTodo={editTodo}
+            setEditTodo={setEditTodo}
           />
         </div> 
         <div>
           <ToDoList 
             todos={todos}
             setTodos={setTodos}
+            setEditTodo={setEditTodo}
           />
         </div>      
       </div>      

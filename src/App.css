@@ -17,7 +17,7 @@
 }
 
 .app-wrapper{
-  background-color: #12343b;
+  background-color: #262a2b;
   min-width: 450px;
   min-height: 650px;
   padding: 15px 30px;
@@ -31,7 +31,8 @@
 .header h1{
   height: 50px;
   color: #fff;
-  background-color: #12343b;
+  background-color: #114550;
+  border-radius: 30px;
   text-align: center;
   margin: 10px 0 30px 0;
 }
@@ -52,14 +53,18 @@
   border-radius: 10px;
 }
 
-.button-add{
-  width: 70px;
+.button-add{  
   padding: 15px;
   font-size: 20px;
   border-radius: 10px;
   border: 0;
-  background-color: #f1af71;
+  background-color: #b66b91;
   cursor: pointer;
+}
+
+.TodoList{  
+  margin-top: 20px;
+  padding: 15px 0;  
 }
 
 .list-item{
@@ -71,18 +76,23 @@
   max-height: 30px;
 }
 
+.ECD_btn{ 
+  display: flex;
+  gap: 10px;
+}
+
 .button-complete, .button-delete, .button-edit{
   border: none;
   outline: none;
   cursor: pointer;
   background-color: transparent;
-  font-size: 28px;
+  font-size: 18px;
   border-radius: 50%;
+  padding-right: 2px;
 }
 
 .button-complete{
-  color: #ff6c6c;
-  margin-right: 10px;
+  color: #ff6c6c;  
 }
 
 .button-edit{
